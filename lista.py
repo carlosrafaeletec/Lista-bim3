@@ -29,7 +29,8 @@ while True:
             print(ex3)
 
         case "4":
-            ex4 = retorna_indice(lista, 12)
+            elemento = input("Digite o elemento para achar seu Indice: ")
+            ex4 = retorna_indice(lista, elemento)
             print(ex4)
 
         case "5":

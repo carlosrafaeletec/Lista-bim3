@@ -40,7 +40,7 @@ def conta_elementos(l: list) -> list:
 def retorna_indice(l: list, elemento) -> list:
     print("\n----- Exer 4 ------\n")
     for i, e in enumerate(l):
-        if e == elemento:
+        if str(e) == elemento:
             return f"o índice do elemento é: {i}"
     return f"{-1}, não há este índice na lista :("
 

@@ -17,7 +17,11 @@ def preenche_lista(l: list) -> None:
         l.append(valor)
         if valor == '':
             l.pop(-1)
-            break   
+            resp = input("\nDeseja parar de preencher? Digite [S]im ou [N]ão: ")
+            if resp.lower() == 's':
+                break
+            elif resp.lower() == 'n':
+                continue  
 
 #Exer 2
 def exibe_lista(l: list) -> None:
@@ -33,12 +37,12 @@ def conta_elementos(l: list) -> list:
     return f"há {contador} elemento(s) na sua lista."
 
 #Exer4
-def retorna_indice(l: list, elemento: int) -> list:
+def retorna_indice(l: list, elemento) -> list:
     print("\n----- Exer 4 ------\n")
     for i, e in enumerate(l):
         if e == elemento:
             return f"o índice do elemento é: {i}"
-        return f"{-1}, não há este índice na lista :("
+    return f"{-1}, não há este índice na lista :("
 
 #Exer5
 def busca(l: list, elemento) -> int:
